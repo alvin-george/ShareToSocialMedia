@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09A1891E686B253DEB604166 /* Pods_SocialMediaShareToTimeLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2834312C596AF496F63C816 /* Pods_SocialMediaShareToTimeLine.framework */; };
 		822C7C831EA72BDC005E508D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C7C821EA72BDC005E508D /* AppDelegate.swift */; };
 		822C7C851EA72BDC005E508D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C7C841EA72BDC005E508D /* ViewController.swift */; };
 		822C7C881EA72BDC005E508D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822C7C861EA72BDC005E508D /* Main.storyboard */; };
 		822C7C8A1EA72BDC005E508D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822C7C891EA72BDC005E508D /* Assets.xcassets */; };
 		822C7C8D1EA72BDC005E508D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822C7C8B1EA72BDC005E508D /* LaunchScreen.storyboard */; };
+		822C7C951EA74324005E508D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 822C7C941EA74324005E508D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		822C7C891EA72BDC005E508D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		822C7C8C1EA72BDC005E508D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822C7C8E1EA72BDC005E508D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		822C7C941EA74324005E508D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E01DC219C5D487A6EF83265 /* Pods-SocialMediaShareToTimeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaShareToTimeLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaShareToTimeLine/Pods-SocialMediaShareToTimeLine.debug.xcconfig"; sourceTree = "<group>"; };
+		A2834312C596AF496F63C816 /* Pods_SocialMediaShareToTimeLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaShareToTimeLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3491AAAABCDC483C5D766A /* Pods-SocialMediaShareToTimeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaShareToTimeLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMediaShareToTimeLine/Pods-SocialMediaShareToTimeLine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A1891E686B253DEB604166 /* Pods_SocialMediaShareToTimeLine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7671354D5B1CC0A3D91700C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2834312C596AF496F63C816 /* Pods_SocialMediaShareToTimeLine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A5B1A76D0CEF78EF0A410AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E01DC219C5D487A6EF83265 /* Pods-SocialMediaShareToTimeLine.debug.xcconfig */,
+				AE3491AAAABCDC483C5D766A /* Pods-SocialMediaShareToTimeLine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		822C7C761EA72BDC005E508D = {
 			isa = PBXGroup;
 			children = (
+				822C7C941EA74324005E508D /* GoogleService-Info.plist */,
 				822C7C811EA72BDC005E508D /* SocialMediaShareToTimeLine */,
 				822C7C801EA72BDC005E508D /* Products */,
+				7A5B1A76D0CEF78EF0A410AA /* Pods */,
+				7671354D5B1CC0A3D91700C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 822C7C911EA72BDC005E508D /* Build configuration list for PBXNativeTarget "SocialMediaShareToTimeLine" */;
 			buildPhases = (
+				FE5CD3B7DB086E9D57CDFDB1 /* [CP] Check Pods Manifest.lock */,
 				822C7C7B1EA72BDC005E508D /* Sources */,
 				822C7C7C1EA72BDC005E508D /* Frameworks */,
 				822C7C7D1EA72BDC005E508D /* Resources */,
+				2122CD15B205067FE2F085B7 /* [CP] Embed Pods Frameworks */,
+				796B858594E1BE4738805906 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				822C7C8D1EA72BDC005E508D /* LaunchScreen.storyboard in Resources */,
+				822C7C951EA74324005E508D /* GoogleService-Info.plist in Resources */,
 				822C7C8A1EA72BDC005E508D /* Assets.xcassets in Resources */,
 				822C7C881EA72BDC005E508D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2122CD15B205067FE2F085B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialMediaShareToTimeLine/Pods-SocialMediaShareToTimeLine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		796B858594E1BE4738805906 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialMediaShareToTimeLine/Pods-SocialMediaShareToTimeLine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE5CD3B7DB086E9D57CDFDB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		822C7C7B1EA72BDC005E508D /* Sources */ = {
@@ -256,6 +335,7 @@
 		};
 		822C7C921EA72BDC005E508D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E01DC219C5D487A6EF83265 /* Pods-SocialMediaShareToTimeLine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SocialMediaShareToTimeLine/Info.plist;
@@ -268,6 +348,7 @@
 		};
 		822C7C931EA72BDC005E508D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE3491AAAABCDC483C5D766A /* Pods-SocialMediaShareToTimeLine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SocialMediaShareToTimeLine/Info.plist;
@@ -297,6 +378,7 @@
 				822C7C931EA72BDC005E508D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

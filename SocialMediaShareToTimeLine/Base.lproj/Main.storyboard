@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialMediaShareToTimeLine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,152 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fmy-DM-Sgg">
+                                <rect key="frame" x="0.0" y="130" width="375" height="70"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google_share_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fo8-F1-IcR">
+                                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="j5n-oj-vk7"/>
+                                            <constraint firstAttribute="width" constant="50" id="tWM-pb-01Y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share To Google Plus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9I-ZD-edQ">
+                                        <rect key="frame" x="80" y="30" width="280" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="aZ8-uf-tx3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Y-YZ-sD9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xye-oZ-l29">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <connections>
+                                            <action selector="shareToGoogleButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWk-ax-2E2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="L9I-ZD-edQ" firstAttribute="top" secondItem="Fmy-DM-Sgg" secondAttribute="top" constant="30" id="2s8-Ts-78G"/>
+                                    <constraint firstItem="Xye-oZ-l29" firstAttribute="leading" secondItem="Fmy-DM-Sgg" secondAttribute="leading" id="Bfm-AP-tTQ"/>
+                                    <constraint firstItem="fo8-F1-IcR" firstAttribute="leading" secondItem="Fmy-DM-Sgg" secondAttribute="leading" constant="15" id="CGe-Dv-BAf"/>
+                                    <constraint firstItem="Y7Y-YZ-sD9" firstAttribute="leading" secondItem="Fmy-DM-Sgg" secondAttribute="leading" id="Hzn-yG-akq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="XGo-0p-wac"/>
+                                    <constraint firstItem="fo8-F1-IcR" firstAttribute="top" secondItem="Fmy-DM-Sgg" secondAttribute="top" constant="15" id="ZE3-ga-bBa"/>
+                                    <constraint firstAttribute="trailing" secondItem="L9I-ZD-edQ" secondAttribute="trailing" constant="15" id="ZLG-FF-Ik4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xye-oZ-l29" secondAttribute="trailing" id="ZrK-vN-Eeg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y7Y-YZ-sD9" secondAttribute="trailing" id="eO5-jn-sla"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xye-oZ-l29" secondAttribute="bottom" id="frw-LM-fJt"/>
+                                    <constraint firstItem="Xye-oZ-l29" firstAttribute="top" secondItem="Fmy-DM-Sgg" secondAttribute="top" id="i0s-8c-t8V"/>
+                                    <constraint firstItem="L9I-ZD-edQ" firstAttribute="leading" secondItem="fo8-F1-IcR" secondAttribute="trailing" constant="15" id="jCp-9c-CZT"/>
+                                    <constraint firstAttribute="height" constant="70" id="llv-oq-Bl3"/>
+                                    <constraint firstItem="Y7Y-YZ-sD9" firstAttribute="top" secondItem="Fmy-DM-Sgg" secondAttribute="top" id="sng-PC-Jxr"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y7Y-YZ-sD9" secondAttribute="bottom" id="w9J-wf-64W"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qio-cg-bcL">
+                                <rect key="frame" x="0.0" y="40" width="375" height="70"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_share_icon" translatesAutoresizingMaskIntoConstraints="NO" id="osU-xg-DIo">
+                                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5tn-fM-EEO"/>
+                                            <constraint firstAttribute="width" constant="50" id="jxc-Kl-f9q"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share To Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Rj-DG-oAM">
+                                        <rect key="frame" x="80" y="30" width="280" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="D2C-zB-QKL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-DK-6JK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkP-mf-uwz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <connections>
+                                            <action selector="shareToFacebookButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wmp-Sh-ooQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="MkP-mf-uwz" firstAttribute="leading" secondItem="Qio-cg-bcL" secondAttribute="leading" id="9Eq-mE-JJ0"/>
+                                    <constraint firstAttribute="height" constant="70" id="DNP-4t-JTa"/>
+                                    <constraint firstItem="osU-xg-DIo" firstAttribute="leading" secondItem="Qio-cg-bcL" secondAttribute="leading" constant="15" id="Do6-bD-hyl"/>
+                                    <constraint firstAttribute="trailing" secondItem="MkP-mf-uwz" secondAttribute="trailing" id="JUu-ua-hoF"/>
+                                    <constraint firstAttribute="bottom" secondItem="BAI-DK-6JK" secondAttribute="bottom" id="Jkx-eI-gcV"/>
+                                    <constraint firstItem="6Rj-DG-oAM" firstAttribute="leading" secondItem="osU-xg-DIo" secondAttribute="trailing" constant="15" id="biR-gE-dHF"/>
+                                    <constraint firstItem="MkP-mf-uwz" firstAttribute="top" secondItem="Qio-cg-bcL" secondAttribute="top" id="eyx-OF-svh"/>
+                                    <constraint firstItem="BAI-DK-6JK" firstAttribute="leading" secondItem="Qio-cg-bcL" secondAttribute="leading" id="hzS-Kp-8eV"/>
+                                    <constraint firstItem="6Rj-DG-oAM" firstAttribute="top" secondItem="Qio-cg-bcL" secondAttribute="top" constant="30" id="jCY-lF-1nT"/>
+                                    <constraint firstAttribute="trailing" secondItem="BAI-DK-6JK" secondAttribute="trailing" id="jSA-cH-RaB"/>
+                                    <constraint firstItem="osU-xg-DIo" firstAttribute="top" secondItem="Qio-cg-bcL" secondAttribute="top" constant="15" id="kga-hQ-EUP"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Rj-DG-oAM" secondAttribute="trailing" constant="15" id="oNT-OV-COm"/>
+                                    <constraint firstItem="BAI-DK-6JK" firstAttribute="top" secondItem="Qio-cg-bcL" secondAttribute="top" id="oh8-sa-N5X"/>
+                                    <constraint firstAttribute="bottom" secondItem="MkP-mf-uwz" secondAttribute="bottom" id="qUv-hP-88Y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-OZ-f4U" customClass="FBSDKShareButton">
+                                <rect key="frame" x="16" y="533" width="343" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="NmZ-p3-fI9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="facebookShareClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRS-A1-znP"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yky-S3-fdh">
+                                <rect key="frame" x="16" y="607" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kon-Xg-6tP"/>
+                                </constraints>
+                                <state key="normal" title="Share With Google"/>
+                                <connections>
+                                    <action selector="googleShareClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dU-x9-lEx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yky-S3-fdh" firstAttribute="top" secondItem="Pee-OZ-f4U" secondAttribute="bottom" constant="21" id="Acw-m2-8a2"/>
+                            <constraint firstAttribute="trailing" secondItem="Qio-cg-bcL" secondAttribute="trailing" id="E48-yL-dbC"/>
+                            <constraint firstItem="Fmy-DM-Sgg" firstAttribute="top" secondItem="Qio-cg-bcL" secondAttribute="bottom" constant="20" id="Fzc-MN-J1M"/>
+                            <constraint firstAttribute="trailing" secondItem="yky-S3-fdh" secondAttribute="trailing" constant="16" id="Jo5-wT-psO"/>
+                            <constraint firstItem="Qio-cg-bcL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="KND-0J-Ejt"/>
+                            <constraint firstItem="yky-S3-fdh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="SKK-oT-yPu"/>
+                            <constraint firstAttribute="trailing" secondItem="Pee-OZ-f4U" secondAttribute="trailing" constant="16" id="Y6c-Nj-MiB"/>
+                            <constraint firstItem="Qio-cg-bcL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="edE-sv-Qim"/>
+                            <constraint firstItem="Pee-OZ-f4U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="icW-bm-itE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yky-S3-fdh" secondAttribute="bottom" constant="20" id="ksQ-aw-UFF"/>
+                            <constraint firstItem="Fmy-DM-Sgg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mnI-hO-HtI"/>
+                            <constraint firstAttribute="trailing" secondItem="Fmy-DM-Sgg" secondAttribute="trailing" id="yWK-DB-UYY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facebookShare" destination="Pee-OZ-f4U" id="TFY-ip-usY"/>
+                        <outlet property="facebookShareButton" destination="MkP-mf-uwz" id="BQG-WC-NrQ"/>
+                        <outlet property="googlePlusShareButton" destination="Xye-oZ-l29" id="Lsq-Rf-WPd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook_share_icon" width="256" height="256"/>
+        <image name="google_share_icon" width="256" height="256"/>
+    </resources>
 </document>
